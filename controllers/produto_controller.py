@@ -8,7 +8,7 @@ class ProdutoController:
     def __init__(self):
         self.repository = ProdutoRepository()
 
-    # Validar os dados do produto
+    
     def validar_produto(self, nome, preco, id_categoria, id_agente):
 
         if not isinstance(nome, str) or not nome.strip():
@@ -31,11 +31,11 @@ class ProdutoController:
 
         return True
 
-    # Listar produtos
+   
     def listar_produtos(self):
         return self.repository.listar_todos()
 
-    # Cadastrar produto
+   
     def cadastrar_produto(self, nome, preco, id_categoria, id_agente):
 
         self.validar_produto(nome, preco, id_categoria, id_agente)
@@ -51,7 +51,7 @@ class ProdutoController:
 
         return True
 
-    # Atualizar produto
+    
     def atualizar_produto(self, id_item, nome, preco, id_categoria, id_agente):
 
         if not isinstance(id_item, int) or id_item <= 0:
@@ -71,7 +71,7 @@ class ProdutoController:
 
         return True
 
-    # Excluir produto
+    
     def excluir_produto(self, id_item):
 
         if not isinstance(id_item, int) or id_item <= 0:
