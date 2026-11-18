@@ -208,7 +208,7 @@ class ProdutoView:
         try:
             id_item = int(self.campo_id_excluir.get())
 
-            # Confirmar exclusão
+           
             confirmar = messagebox.askyesno(
                 "Confirmar exclusão",
                 "Tem certeza que deseja excluir este produto?"
@@ -223,10 +223,10 @@ class ProdutoView:
                     "Produto excluído com sucesso!"
                 )
 
-                # Limpar o campo
+                
                 self.campo_id_excluir.delete(0, "end")
 
-                # Atualizar a listagem
+                
                 self.listar_produtos()
 
         except ValueError as erro:
