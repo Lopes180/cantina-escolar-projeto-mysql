@@ -4,10 +4,10 @@ import mysql.connector
 from dotenv import load_dotenv
 from pathlib import Path
 
-# Localiza a pasta principal do projeto
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Carrega o arquivo .env da pasta principal
+
 load_dotenv(BASE_DIR / ".env")
 
 
