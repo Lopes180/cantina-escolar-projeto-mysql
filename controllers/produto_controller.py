@@ -31,11 +31,8 @@ class ProdutoController:
 
         return True
 
-   
     def listar_produtos(self):
         return self.repository.listar_todos()
-
-   
     def cadastrar_produto(self, nome, preco, id_categoria, id_agente):
 
         self.validar_produto(nome, preco, id_categoria, id_agente)
